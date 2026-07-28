@@ -18,7 +18,7 @@ st.markdown(
     <img src="{logo_data_uri('navy')}" style="height:52px; margin-bottom:0.5rem;" />
     <h1>Get in Touch</h1>
     <p style="opacity:0.8; margin-top:-0.5rem;">
-        Questions about your property? Reach us directly — no forms, just a call or an email.
+        Questions about your property? Reach us directly — just a call or an email.
     </p>
     """,
     unsafe_allow_html=True,
