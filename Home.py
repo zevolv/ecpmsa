@@ -19,7 +19,7 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
-st.page_link("2_Contact.py", label="Get in Touch")
+st.page_link("pages/2_Contact.py", label="Get in Touch")
 
 st.markdown("### What we do")
 st.markdown(
