@@ -52,7 +52,7 @@ def inject_css():
 
         h1, h2, h3, h4 {{
             font-family: 'Poppins', sans-serif !important;
-            color: {NAVY} !important;
+            color: {NAVY};
             letter-spacing: -0.01em;
         }}
 
