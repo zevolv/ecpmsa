@@ -12,14 +12,15 @@ inject_css()
 st.markdown(
     f"""
     <div class="hero-band">
-        <img src="{logo_data_uri('white')}" style="height:70px; margin-bottom:0.75rem;" />
+        <img src="{logo_data_uri('white')}" style="height:60px; margin-bottom:0.75rem;" />
         <div class="hero-title">Canadian Professional Property Management</div>
         <p class="tagline">Reliable, skilled, and experienced care for your property.</p>
     </div>
     """,
     unsafe_allow_html=True,
 )
-st.page_link("pages/2_Contact.py", label="Get in Touch")
+if st.button("Get in Touch", type="primary", key="cta"):
+    st.switch_page("pages/2_Contact.py")
 
 st.markdown("### What we do")
 st.markdown(

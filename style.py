@@ -104,34 +104,6 @@ def inject_css():
             margin-top: 0.25rem;
         }}
 
-        /* st.page_link styled as CTA button */
-        [data-testid="stPageLink"] {{
-            margin-top: 0rem;
-            margin-bottom: 0.5rem;
-        }}
-        [data-testid="stPageLink"] a,
-        [data-testid="stPageLink"] a *,
-        [data-testid="stPageLink"] span,
-        [data-testid="stPageLink"] p {{
-            display: inline-block !important;
-            background: {STEEL_BLUE} !important;
-            color: {WHITE} !important;
-            font-family: 'Poppins', sans-serif !important;
-            font-weight: 600 !important;
-            font-size: 1rem !important;
-            padding: 0.65rem 1.6rem !important;
-            border-radius: 8px !important;
-            text-decoration: none !important;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.15) !important;
-            transition: transform 0.15s ease, background 0.15s ease !important;
-            border: none !important;
-        }}
-        [data-testid="stPageLink"] a:hover {{
-            transform: translateY(-2px) !important;
-            background: {STEEL_BLUE_DARK} !important;
-            color: {WHITE} !important;
-        }}
-
         /* Service card */
         .service-card {{
             background: {POWDER_BLUE};
