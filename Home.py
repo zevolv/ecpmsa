@@ -12,7 +12,7 @@ inject_css()
 st.markdown(
     f"""
     <div class="hero-band">
-        <img src="{logo_data_uri('white')}" style="height:50px; margin-bottom:0.75rem;" />
+        <img src="{logo_data_uri('white')}" style="height:40px; margin-bottom:0.75rem;" />
         <div class="hero-title">Canadian Professional Property Management</div>
         <p class="tagline">Reliable, skilled, and experienced care for your property.</p>
     </div>
