@@ -78,7 +78,7 @@ def inject_css():
         .hero-title {{
             font-family: 'Poppins', sans-serif !important;
             font-size: 3rem !important;
-            font-weight: 700 !important;
+            font-weight: 600 !important;
             color: {WHITE} !important;
             margin: 0 0 0.75rem 0 !important;
             line-height: 1.15 !important;

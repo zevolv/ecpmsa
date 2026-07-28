@@ -52,6 +52,8 @@ for col, (icon, label) in zip(cols, services_preview):
             unsafe_allow_html=True,
         )
 
+st.page_link("pages/1_Services.py", label="→ See details")
+
 st.markdown(key_teeth_divider(), unsafe_allow_html=True)
 
 st.markdown("### Reach us directly")
