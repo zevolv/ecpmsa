@@ -32,14 +32,8 @@ def logo_data_uri(variant: str = "navy") -> str:
 
 
 def key_teeth_divider(color: str = STEEL_BLUE) -> str:
-    """Three stacked horizontal lines as a clean section divider."""
-    return f"""
-    <div style="margin: 0.5rem 0 1.75rem 0;">
-        <div style="width:100%; height:2px; background:{color}; opacity:0.85; border-radius:1px;"></div>
-        <div style="width:65%;  height:2px; background:{color}; opacity:0.55; border-radius:1px; margin-top:5px;"></div>
-        <div style="width:35%;  height:2px; background:{color}; opacity:0.3;  border-radius:1px; margin-top:5px;"></div>
-    </div>
-    """
+    """Simple horizontal rule section divider."""
+    return f'<hr style="border:none; border-top:1px solid {color}; opacity:0.25; margin:1.5rem 0;">'
 
 
 PAGE_CONFIG_ICON = str(ASSETS / "favicon.png")
@@ -49,15 +43,15 @@ def inject_css():
     st.markdown(
         f"""
         <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
         html, body, [class*="css"] {{
-            font-family: 'Inter', sans-serif;
+            font-family: 'Poppins', sans-serif;
             color: {NAVY};
         }}
 
         h1, h2, h3, h4 {{
-            font-family: 'Space Grotesk', sans-serif !important;
+            font-family: 'Poppins', sans-serif !important;
             color: {NAVY} !important;
             letter-spacing: -0.01em;
         }}
@@ -77,7 +71,7 @@ def inject_css():
         }}
 
         .mono {{
-            font-family: 'IBM Plex Mono', monospace;
+            font-family: 'Poppins', sans-serif;
         }}
 
         /* Curved steel-blue hero band, echoing the business card's cut corner */
@@ -108,7 +102,7 @@ def inject_css():
             display: inline-block !important;
             background: {STEEL_BLUE} !important;
             color: {WHITE} !important;
-            font-family: 'Space Grotesk', sans-serif !important;
+            font-family: 'Poppins', sans-serif !important;
             font-weight: 600 !important;
             font-size: 1rem !important;
             padding: 0.65rem 1.6rem !important;
@@ -151,7 +145,7 @@ def inject_css():
             display: flex;
             align-items: center;
             gap: 0.7rem;
-            font-family: 'IBM Plex Mono', monospace;
+            font-family: 'Poppins', sans-serif;
             font-size: 1.05rem;
             padding: 0.5rem 0;
             color: {NAVY} !important;
