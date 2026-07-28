@@ -104,6 +104,19 @@ def inject_css():
             margin-top: 0.25rem;
         }}
 
+        /* Hamburger icon for sidebar collapse/expand button */
+        [data-testid="stSidebarCollapseButton"] button svg,
+        [data-testid="stSidebarCollapsedControl"] svg {{
+            display: none !important;
+        }}
+        [data-testid="stSidebarCollapseButton"] button::before,
+        [data-testid="stSidebarCollapsedControl"] button::before {{
+            content: "☰";
+            font-size: 1.3rem;
+            line-height: 1;
+            color: {NAVY};
+        }}
+
         /* Service card */
         .service-card {{
             background: {POWDER_BLUE};
