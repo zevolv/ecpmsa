@@ -1,27 +1,32 @@
-# 🏡ECPM
+<img src="assets/logo_steelblue.png" height="80" alt="E-CPM logo" />
 
-Canadian Professional Property Management
-Reliable, skilled, and experienced care for your property
+**Canadian Professional Property Management**  
+Reliable, skilled, and experienced care for your property.
 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ecpmsa.streamlit.app/)
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+---
 
-### How to run it on your own machine
+### Run locally
 
-Prerequisite: install `uv` if you don't already have it.
+**Option A — with `uv` (recommended, faster)**
 
+`uv` is a fast Python package manager. Install it once on Windows:
+
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
-$ curl -LsSf https://astral.sh/uv/install.sh | sh
+
+Then run the app:
+
+```powershell
+uv sync
+uv run streamlit run streamlit_app.py
 ```
 
-1. Sync the dependencies
+**Option B — with plain `pip`**
 
-   ```
-   $ uv sync
-   ```
-
-2. Run the app
-
-   ```
-   $ uv run streamlit run streamlit_app.py
-   ```
+```powershell
+pip install streamlit
+streamlit run streamlit_app.py
+```
