@@ -74,6 +74,17 @@ def inject_css():
             font-family: 'Poppins', sans-serif;
         }}
 
+        /* Hero title — uses <div> to avoid Streamlit's p/h1 CSS overrides */
+        .hero-title {{
+            font-family: 'Poppins', sans-serif !important;
+            font-size: 3rem !important;
+            font-weight: 700 !important;
+            color: {WHITE} !important;
+            margin: 0 0 0.75rem 0 !important;
+            line-height: 1.15 !important;
+            letter-spacing: -0.02em !important;
+        }}
+
         /* Curved steel-blue hero band, echoing the business card's cut corner */
         .hero-band {{
             background: linear-gradient(135deg, {STEEL_BLUE} 0%, {STEEL_BLUE_DARK} 100%);
@@ -98,7 +109,10 @@ def inject_css():
             margin-top: 0rem;
             margin-bottom: 0.5rem;
         }}
-        [data-testid="stPageLink"] a {{
+        [data-testid="stPageLink"] a,
+        [data-testid="stPageLink"] a *,
+        [data-testid="stPageLink"] span,
+        [data-testid="stPageLink"] p {{
             display: inline-block !important;
             background: {STEEL_BLUE} !important;
             color: {WHITE} !important;

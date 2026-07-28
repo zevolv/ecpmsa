@@ -13,7 +13,7 @@ st.markdown(
     f"""
     <div class="hero-band">
         <img src="{logo_data_uri('white')}" style="height:70px; margin-bottom:0.75rem;" />
-        <p class="hero-title">Canadian Professional Property Management</p>
+        <div class="hero-title">Canadian Professional Property Management</div>
         <p class="tagline">Reliable, skilled, and experienced care for your property.</p>
     </div>
     """,
