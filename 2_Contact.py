@@ -1,11 +1,5 @@
 import streamlit as st
-from style import inject_css, logo_data_uri, key_teeth_divider, PAGE_CONFIG_ICON, PHONE, PHONE_HREF, EMAIL, EMAIL_HREF
-
-st.set_page_config(
-    page_title="Contact | E-CPM",
-    page_icon=PAGE_CONFIG_ICON,
-    layout="wide",
-)
+from style import inject_css, logo_data_uri, key_teeth_divider, PHONE, PHONE_HREF, EMAIL, EMAIL_HREF
 st.markdown(
     "<style>.block-container{max-width:900px; padding-top:2rem;}</style>",
     unsafe_allow_html=True,

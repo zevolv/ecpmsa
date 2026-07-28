@@ -1,5 +1,5 @@
 import streamlit as st
-from style import inject_css, logo_data_uri, key_teeth_divider, PAGE_CONFIG_ICON, PHONE, PHONE_HREF, EMAIL, EMAIL_HREF
+from style import PAGE_CONFIG_ICON
 
 st.set_page_config(
     page_title="E-CPM | Canadian Professional Property Management",
@@ -7,25 +7,13 @@ st.set_page_config(
     layout="wide",
 )
 
-st.markdown(
-    "<style>.block-container{max-width:900px; padding-top:2rem;}</style>",
-    unsafe_allow_html=True,
-)
+pg = st.navigation([
+    st.Page("Home.py", title="Home"),
+    st.Page("1_Services.py", title="Services"),
+    st.Page("2_Contact.py", title="Contact"),
+])
+pg.run()
 
-inject_css()
-
-# ---- Hero -------------------------------------------------------------
-st.markdown(
-    f"""
-    <div class="hero-band">
-        <img src="{logo_data_uri('white')}" style="height:70px; margin-bottom:0.75rem;" />
-        <h1 style="margin-bottom:0.1rem;">Canadian Professional Property Management</h1>
-        <p class="tagline">Reliable, skilled, and experienced care for your property.</p>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
-st.page_link("pages/2_Contact.py", label="Get in Touch")
 
 st.markdown("### What we do")
 st.markdown(
