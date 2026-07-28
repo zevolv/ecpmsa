@@ -31,22 +31,14 @@ def logo_data_uri(variant: str = "navy") -> str:
     return f"data:image/png;base64,{_b64(ASSETS / fname)}"
 
 
-def key_teeth_divider(color: str = STEEL_BLUE, height: int = 18) -> str:
-    """A thin repeating key-teeth notch pattern used as a section divider,
-    echoing the logo's key motif instead of a plain <hr>."""
+def key_teeth_divider(color: str = STEEL_BLUE) -> str:
+    """Three stacked horizontal lines as a clean section divider."""
     return f"""
-    <div style="
-        width:100%; height:{height}px; margin: 0.25rem 0 1.75rem 0;
-        background: repeating-linear-gradient(
-            90deg,
-            {color} 0px, {color} 3px,
-            transparent 3px, transparent 6px,
-            {color} 6px, {color} 9px,
-            transparent 9px, transparent 16px
-        );
-        clip-path: polygon(0 0, 100% 0, 100% 40%, 0 100%);
-        opacity: 0.85;
-    "></div>
+    <div style="margin: 0.5rem 0 1.75rem 0;">
+        <div style="width:100%; height:2px; background:{color}; opacity:0.85; border-radius:1px;"></div>
+        <div style="width:65%;  height:2px; background:{color}; opacity:0.55; border-radius:1px; margin-top:5px;"></div>
+        <div style="width:35%;  height:2px; background:{color}; opacity:0.3;  border-radius:1px; margin-top:5px;"></div>
+    </div>
     """
 
 
@@ -66,16 +58,22 @@ def inject_css():
 
         h1, h2, h3, h4 {{
             font-family: 'Space Grotesk', sans-serif !important;
-            color: {NAVY};
+            color: {NAVY} !important;
             letter-spacing: -0.01em;
         }}
 
         .stApp {{
-            background: {WHITE};
+            background: {WHITE} !important;
+            color: {NAVY} !important;
         }}
 
         [data-testid="stHeader"] {{
             background: rgba(0,0,0,0);
+        }}
+
+        /* Ensure text stays dark regardless of system theme */
+        .stMarkdown, .stMarkdown p, .stMarkdown span {{
+            color: {NAVY};
         }}
 
         .mono {{
@@ -101,22 +99,29 @@ def inject_css():
             margin-top: 0.25rem;
         }}
 
-        /* CTA button */
-        .cta-button {{
-            display: inline-block;
-            background: {WHITE};
-            color: {STEEL_BLUE_DARK} !important;
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 600;
-            padding: 0.65rem 1.6rem;
-            border-radius: 8px;
-            text-decoration: none !important;
-            margin-top: 1.25rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.12);
-            transition: transform 0.15s ease;
+        /* st.page_link styled as CTA button */
+        [data-testid="stPageLink"] {{
+            margin-top: 0rem;
+            margin-bottom: 0.5rem;
         }}
-        .cta-button:hover {{
-            transform: translateY(-2px);
+        [data-testid="stPageLink"] a {{
+            display: inline-block !important;
+            background: {STEEL_BLUE} !important;
+            color: {WHITE} !important;
+            font-family: 'Space Grotesk', sans-serif !important;
+            font-weight: 600 !important;
+            font-size: 1rem !important;
+            padding: 0.65rem 1.6rem !important;
+            border-radius: 8px !important;
+            text-decoration: none !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15) !important;
+            transition: transform 0.15s ease, background 0.15s ease !important;
+            border: none !important;
+        }}
+        [data-testid="stPageLink"] a:hover {{
+            transform: translateY(-2px) !important;
+            background: {STEEL_BLUE_DARK} !important;
+            color: {WHITE} !important;
         }}
 
         /* Service card */
@@ -131,12 +136,13 @@ def inject_css():
             margin-top: 0;
             margin-bottom: 0.4rem;
             font-size: 1.05rem;
+            color: {NAVY} !important;
         }}
         .service-card p {{
             margin: 0;
             font-size: 0.93rem;
             line-height: 1.5;
-            color: {NAVY};
+            color: {NAVY} !important;
             opacity: 0.85;
         }}
 
@@ -148,13 +154,14 @@ def inject_css():
             font-family: 'IBM Plex Mono', monospace;
             font-size: 1.05rem;
             padding: 0.5rem 0;
+            color: {NAVY} !important;
         }}
         .contact-row a {{
-            color: {NAVY};
+            color: {NAVY} !important;
             text-decoration: none;
         }}
         .contact-row a:hover {{
-            color: {STEEL_BLUE_DARK};
+            color: {STEEL_BLUE_DARK} !important;
             text-decoration: underline;
         }}
 
@@ -167,6 +174,7 @@ def inject_css():
             font-size: 0.85rem;
             opacity: 0.65;
             text-align: center;
+            color: {NAVY} !important;
         }}
         </style>
         """,

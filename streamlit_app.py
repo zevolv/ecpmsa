@@ -21,11 +21,11 @@ st.markdown(
         <img src="{logo_data_uri('white')}" style="height:70px; margin-bottom:0.75rem;" />
         <h1 style="margin-bottom:0.1rem;">Canadian Professional Property Management</h1>
         <p class="tagline">Reliable, skilled, and experienced care for your property.</p>
-        <a class="cta-button" href="/Contact" target="_self">Get in Touch</a>
     </div>
     """,
     unsafe_allow_html=True,
 )
+st.page_link("pages/2_Contact.py", label="Get in Touch")
 
 st.markdown("### What we do")
 st.markdown(
