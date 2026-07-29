@@ -41,7 +41,7 @@ st.markdown(
 st.markdown(key_teeth_divider(), unsafe_allow_html=True)
 
 st.markdown("**We service in San Miguel de Salinas & Orihuela Costa Area.**")
-st.image(str(ASSETS / "service_area_map.png"), use_container_width=True)
+st.image(str(ASSETS / "service_area_map.png"), width=450)
 
 st.markdown(
     '<div class="ecpm-footer">© 2026 E-CPM — Canadian Professional Property Management</div>',
