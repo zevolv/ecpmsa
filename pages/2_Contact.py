@@ -1,5 +1,8 @@
 import streamlit as st
+from pathlib import Path
 from style import inject_css, logo_data_uri, key_teeth_divider, PHONE, PHONE_HREF, EMAIL, EMAIL_HREF
+
+ASSETS = Path(__file__).parent.parent / "assets"
 
 st.markdown(
     "<style>.block-container{max-width:900px; padding-top:2rem;}</style>",
@@ -34,6 +37,11 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+
+st.markdown(key_teeth_divider(), unsafe_allow_html=True)
+
+st.markdown("**We service in San Miguel de Salinas & Orihuela Costa Area.**")
+st.image(str(ASSETS / "service_area_map.png"), use_container_width=True)
 
 st.markdown(
     '<div class="ecpm-footer">© 2026 E-CPM — Canadian Professional Property Management</div>',
