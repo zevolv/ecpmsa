@@ -77,7 +77,7 @@ def inject_css():
         /* Hero title — uses <div> to avoid Streamlit's p/h1 CSS overrides */
         .hero-title {{
             font-family: 'Poppins', sans-serif !important;
-            font-size: 3rem !important;
+            font-size: 2.2rem !important;
             font-weight: 600 !important;
             color: {WHITE} !important;
             margin: 0 0 0.75rem 0 !important;

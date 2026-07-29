@@ -24,9 +24,9 @@ if st.button("Get in Touch", type="primary", key="cta"):
 
 st.markdown("### What we do")
 st.markdown(
-    "From routine upkeep to guest support, E-CPM takes care of the details "
-    "so property owners don't have to. Here's a quick look — full details "
-    "on the Services page."
+    "We service in San Miguel de Salinas & Orihuela Costa Area. From routine upkeep to guest support, E-CPM takes care of the details "
+    "so property owners don't have to. Here's a quick look — "
+    "[full details on the Services page](/Services)."
 )
 
 st.markdown(key_teeth_divider(), unsafe_allow_html=True)
@@ -51,8 +51,6 @@ for col, (icon, label) in zip(cols, services_preview):
             """,
             unsafe_allow_html=True,
         )
-
-st.page_link("pages/1_Services.py", label="→ See details")
 
 st.markdown(key_teeth_divider(), unsafe_allow_html=True)
 
